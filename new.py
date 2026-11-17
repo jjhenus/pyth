@@ -75,4 +75,30 @@ def palindrome():
     else:
         print("No")
 
-palindrome()
+def fizzbuzz():
+    numbers = [100, 50, 65, 82, 23, 45]
+    newlist = []
+    for x in numbers:
+        if x % 5 == 0 and x % 3 == 0:
+            print("Yes")
+            newlist.append("FizzBuzz")
+        elif x % 5 == 0:
+            print("No")
+            newlist.append("Buzz")
+        elif x % 3 == 0:
+            newlist.append("Fizz")
+        else:
+            newlist.append(x)
+    print(newlist)
+
+def nodup():
+    numbers = [1, 2, 2, 3, 1]
+    nodupnum = []
+    for x in numbers:
+        if numbers.count(x) > 0:
+            print("DUP")
+        else:
+            print("NODUP")
+            nodump.append(x)
+
+nodup()
