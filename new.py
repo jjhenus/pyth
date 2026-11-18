@@ -1,4 +1,5 @@
 import random
+import math
 def OK():
     word = input("Type a word ")
 
@@ -99,6 +100,104 @@ def nodup():
             print("DUP")
         else:
             print("NODUP")
-            nodump.append(x)
+            nodupnum.append(x)
+        print(nodupnum)
 
-nodup()
+def sec():
+    numbers = [100, 50, 65, 82, 23, 45, 65]
+    nodupnum = []
+    for x in numbers:
+        if x in nodupnum:
+            pass
+        else:
+            nodupnum.append(x)
+    nodupnum.sort(reverse = True)
+    print(nodupnum[1])
+
+def indexsum():
+    numbers = [1, 2, 3, 4, 5, 6, 7]
+    num = int(input(""))
+    for x in range(len(numbers)):
+        print(x)
+
+def isprime():
+    n = int(input(""))
+    if n <= 1:
+        print("No Prime")
+    else:
+        for i in range(2, int(n**0.5) + 1):
+            if n % i == 0:
+                print("No Prime")
+                break
+            print("Prime")
+            break
+
+def primesto():
+    n = int(input(""))
+    primelist = []
+    for i in range(n):
+        if i <= 1:
+            prime = False
+        if i == 2 or i == 3:
+            prime = True
+        else:
+            prime = True
+            for x in range(2, int(i*0.5) + 1):
+                if i % x == 0:
+                    prime = False
+                    break
+
+        if prime == True:
+            primelist.append(i)
+
+    print(primelist)
+
+def nfib():
+    n = int(input(""))
+    print("")
+    i = 1
+    x = 1
+    fiblist = []
+    while n > 0:
+        y = i + x 
+        n = n - 1
+        print(y)
+        i = x + y 
+        n = n - 1
+        print(i)
+        x = y + i 
+        n = n - 1
+        print(x)
+        
+
+def test():
+    i = 1
+    x = 1
+    y = i + x
+    print(y)
+
+
+def compress():
+    word = list(input(""))
+    nodupl = []
+    for x in word:
+        if  x + str(word.count(x)) in nodupl:
+            print("DUP")
+        else:
+            nodupl.append(x + str(word.count(x)))
+
+    print(str("".join(nodupl)))
+
+def valid_parentheses():
+    check = list(input(""))
+    olist = []
+    for x in check:
+        if x == "(":
+            olist.append(1)
+        if x == ")":
+            olist.append(-1)
+    print(olist)
+
+    print(check)
+
+valid_parentheses()
