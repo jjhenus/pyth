@@ -99,7 +99,6 @@ def nodup():
         if x in nodupnum:
             print("DUP")
         else:
-<<<<<<< HEAD
             nodupnum.append(x)
             
             print(nodupnum)
@@ -133,11 +132,6 @@ def anagramtwo():
         print("Yes")
     else:
         print("No")
-anagramtwo()
-=======
-            print("NODUP")
-            nodupnum.append(x)
-        print(nodupnum)
 
 def sec():
     numbers = [100, 50, 65, 82, 23, 45, 65]
@@ -237,4 +231,3 @@ def valid_parentheses():
     print(check)
 
 valid_parentheses()
->>>>>>> 56b09ef8cf74bdd55e2d404db4e5acfa88b4354a
