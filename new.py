@@ -95,10 +95,40 @@ def nodup():
     numbers = [1, 2, 2, 3, 1]
     nodupnum = []
     for x in numbers:
-        if numbers.count(x) > 0:
+        if x in nodupnum:
             print("DUP")
         else:
-            print("NODUP")
-            nodump.append(x)
+            nodupnum.append(x)
+            
+            print(nodupnum)
 
-nodup()
+def char_count():
+    word = list(input(""))
+    nodup = []
+    lcount = []
+    for x in word:
+        if x in nodup:
+            pass
+        else:
+            nodup.append(x)
+
+    for x in nodup:
+        print('"' + x + '": '+ str(word.count(x)))
+        
+
+def reverse_word():
+    sent = (input(""))
+    words = sent.split()
+    print(words)
+    words.reverse()
+    print(words)
+
+def anagramtwo():
+    fword = list(input("First ").casefold())
+    sword = list(input("Second ").casefold())
+    sword.reverse()
+    if fword == sword:
+        print("Yes")
+    else:
+        print("No")
+anagramtwo()
