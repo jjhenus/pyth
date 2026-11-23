@@ -92,4 +92,46 @@ def mis_num():
         n = n + 1
 
 
-mis_num()
+def move_zero():
+    nums = [0, 1, 0, 3, 12]
+    n = 0
+    for x in nums:
+        if x == 0:
+            nums.remove(x)
+            n = n + 1
+
+        if n > 0:
+            nums.append(0)
+            n = n - 1
+    print(nums)
+
+
+def longest_streak():
+    nums = [0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1]
+    i = 0
+    y = 0
+    for x in nums:
+        if x == 1:
+            i = i + 1
+        if x == 0:
+            i = 0
+        if i > y:
+            y = i
+
+    print(y)
+
+
+def mergelist():
+    list1 = [1, 4, 6]
+    list2 = [2, 3, 7]
+    list3 = []
+    for x in list1:
+        if list2[list1.index(x)] > x:
+            list3.append(x)
+            list1.remove(x)
+        if list2[list1.index(x)] < x:
+
+        print(list3)
+
+
+mergelist()
