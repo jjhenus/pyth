@@ -129,9 +129,11 @@ def mergelist():
     llen = len(list1) + len(list2)
     for i in range(llen):
         x = list1[0]
-        print(x)
         y = list2[0]
-        print(y)
+        if i == llen - 1:
+            list3.append(y)
+            list3.append(x)
+            break
         if x > y:
             list3.append(y)
             list2.pop(0)
@@ -139,10 +141,8 @@ def mergelist():
         if x < y:
             list3.append(x)
             list1.pop(0)
-        if y == 0 or x == 0:
-            list3.append(y)
-            list3.append(x)
-        i = i - 1
+        i = i + 1
+        print(i)
     print(list3)
 
 
