@@ -3,6 +3,7 @@ def count_words():
     lsent = sent.rsplit(" ")
     print(len(lsent))
 
+
 def factorial():
     num = int(input(""))
     x = 0
@@ -12,6 +13,7 @@ def factorial():
         n = n + 1
     print(x)
 
+
 def count_even():
     numbs = [1, 2, 4, 7]
     for x in numbs:
@@ -20,6 +22,7 @@ def count_even():
         else:
             print("No")
 
+
 def cap_words():
     words = input("")
     lwords = words.rsplit(" ")
@@ -27,6 +30,7 @@ def cap_words():
     for x in lwords:
         bwords.append(x.capitalize())
     print(" ".join(bwords))
+
 
 def common_el():
     alist = [1, 2, 3, 4]
@@ -37,6 +41,7 @@ def common_el():
             clist.append(x)
     print(clist)
 
+
 def longest_word():
     sent = input("")
     slist = sent.rsplit(" ")
@@ -45,9 +50,9 @@ def longest_word():
     for x in slist:
         llist.append(len(x))
     for x in llist:
-        if x > n:
-            n = x
+        n = max(n, x)
     print(slist[llist.index(n)])
+
 
 def rotate():
     nums = [1, 2, 3, 4, 5]
@@ -65,6 +70,7 @@ def rotate():
     lnums.extend(nums)
     print(lnums)
 
+
 def first_unique():
     word = list(input(""))
     for x in word:
@@ -73,15 +79,17 @@ def first_unique():
             print(x)
             break
 
+
 def mis_num():
     nums = [0, 1, 3, 4]
     n = 0
     for x in nums:
-        if not x == n:
+        if x != n:
             print("NO " + str(x) + " should be: " + str(n))
             break
         else:
             print(str(x) + " = " + str(n))
         n = n + 1
-        
+
+
 mis_num()
