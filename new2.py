@@ -125,25 +125,46 @@ def mergelist():
     list1 = [1, 4, 6]
     list2 = [2, 3, 7]
     list3 = []
-
-    llen = len(list1) + len(list2)
-    for i in range(llen):
-        x = list1[0]
+    while len(list1) > 0 and len(list2) > 0:
         y = list2[0]
-        if i == llen - 1:
-            list3.append(y)
-            list3.append(x)
-            break
+        x = list1[0]
+
         if x > y:
             list3.append(y)
             list2.pop(0)
+            print("X>Y")
 
         if x < y:
             list3.append(x)
             list1.pop(0)
-        i = i + 1
-        print(i)
+            print("X<Y")
+
+        if x == y:
+            list3.append(0)
+            list3.append(0)
+            list1.pop(0)
+            list2.pop(0)
+            print("SAME")
+
+    list3.extend(list1)
+    list3.extend(list2)
+
     print(list3)
 
 
-mergelist()
+def sortlist():
+    list = [5, 2, 9, 1]
+    list2 = []
+
+    while len(list) > 0:
+        y = list[0]
+        for x in list:
+            if x < y:
+                y = x
+
+        list2.append(y)
+        list.remove(y)
+    print(list2)
+
+
+sortlist()
